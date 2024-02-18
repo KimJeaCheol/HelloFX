@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="880.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="600.0" prefWidth="880.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InsertController">
    <children>
       <Label layoutX="373.0" layoutY="33.0" text="글쓰기">
          <font>
@@ -29,27 +28,27 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="229.0" layoutY="101.0" prefHeight="39.0" prefWidth="542.0" promptText="제목을 입력하세요.">
+      <TextField fx:id="tfTitle" layoutX="229.0" layoutY="101.0" prefHeight="39.0" prefWidth="542.0" promptText="제목을 입력하세요.">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField layoutX="229.0" layoutY="149.0" prefHeight="39.0" prefWidth="542.0" promptText="작성자를 입력하세요.">
+      <TextField fx:id="tfWriter" layoutX="229.0" layoutY="149.0" prefHeight="39.0" prefWidth="542.0" promptText="작성자를 입력하세요.">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextArea layoutX="84.0" layoutY="246.0" prefHeight="264.0" prefWidth="714.0" promptText="내용을 작성해주세요.">
+      <TextArea fx:id="taContent" layoutX="84.0" layoutY="246.0" prefHeight="264.0" prefWidth="714.0" promptText="내용을 작성해주세요.">
          <font>
             <Font size="18.0" />
          </font>
       </TextArea>
-      <Button layoutX="83.0" layoutY="530.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="목록">
+      <Button layoutX="83.0" layoutY="530.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="40.0" prefWidth="100.0" text="목록">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="698.0" layoutY="530.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="등록">
+      <Button layoutX="698.0" layoutY="530.0" mnemonicParsing="false" onAction="#insert" prefHeight="40.0" prefWidth="100.0" text="등록">
          <font>
             <Font size="16.0" />
          </font>

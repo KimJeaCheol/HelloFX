@@ -1,12 +1,15 @@
 package DAO;
 
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import DTO.Board;
 
-public class BoardDAO extends JDBConnection{
+public class BoardDAO extends JDBConnection {
+	
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	public List<Board> list(){
 		List<Board> boardList = new ArrayList<Board>();
@@ -22,8 +25,8 @@ public class BoardDAO extends JDBConnection{
 				board.setTitle(rs.getString("title"));
 				board.setWriter(rs.getString("writer"));
 				board.setContent(rs.getString("content"));
-				board.setRegDate(rs.getTimestamp("reg_date"));
-				board.setUpdDate(rs.getTimestamp("upd_date"));
+				board.setRegDate(dateFormat.format(rs.getTimestamp("reg_date")));
+				board.setUpdDate(dateFormat.format(rs.getTimestamp("upd_date")));
 				boardList.add(board);
 			}
 		} catch (SQLException e) {
@@ -49,8 +52,8 @@ public class BoardDAO extends JDBConnection{
 				board.setTitle(rs.getString("title"));
 				board.setWriter(rs.getString("writer"));
 				board.setContent(rs.getString("content"));
-				board.setRegDate(rs.getTimestamp("reg_date"));
-				board.setUpdDate(rs.getTimestamp("upd_date"));
+				board.setRegDate(dateFormat.format(rs.getTimestamp("reg_date")));
+				board.setUpdDate(dateFormat.format(rs.getTimestamp("upd_date")));
 			}else {
 				board = null;
 			}

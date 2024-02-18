@@ -1,7 +1,6 @@
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,7 +13,8 @@ public class DBTest {
 	static List<Board> boardList = new ArrayList<Board>();
 	static Scanner sc = new Scanner(System.in);
 	static BoardService boardService = new BoardServiceImpl();
-	
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
 	
 	public static void main(String[] args) {
 		int menuNo = 0; //메뉴번호
@@ -140,12 +140,9 @@ public class DBTest {
 		String title = board.getTitle();
 		String writer = board.getWriter();
 		String content = board.getContent();
-		Date regDate = board.getRegDate();
-		Date updDate = board.getUpdDate();
-		
-		SimpleDateFormat dateFormate = new SimpleDateFormat("YYYY/MM/dd - HH:mm:ss");
-		String regDateStr = dateFormate.format(regDate);
-		String updDateStr = dateFormate.format(updDate);
+
+		String regDateStr = board.getRegDate();
+		String updDateStr = board.getUpdDate();
 		
 		System.out.println("[글번호 : " + boardNo + "]");
 		System.out.println("제목 : " + title);

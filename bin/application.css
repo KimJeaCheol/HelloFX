@@ -1,1 +1,35 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, derive(cornflowerblue, 20%), derive(cornflowerblue, -20%));
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-font-size: 14;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, derive(cornflowerblue, 10%), derive(cornflowerblue, -10%));
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, derive(cornflowerblue, 20%), derive(cornflowerblue, -20%));
+}
+
+.table-row-cell:filled:selected:focused,
+.table-row-cell:filled:selected {
+    -fx-background-color: linear-gradient(to bottom, derive(cornflowerblue, 20%), derive(cornflowerblue, -20%));
+}
+
+.table-view .column-header * {
+    -fx-text-fill: white;
+}
+
+.tableCol {
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER;
+}
+
+#colTitle {
+    -fx-alignment: CENTER-LEFT;
+}
