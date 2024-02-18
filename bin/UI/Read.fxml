@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="373.0" layoutY="33.0" text="글읽기">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="100.0" text="제목 :">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="148.0" text="작성자 :">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="201.0" text="내용 :">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField editable="false" layoutX="229.0" layoutY="101.0" prefHeight="39.0" prefWidth="542.0" promptText="제목을 입력하세요.">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="229.0" layoutY="149.0" prefHeight="39.0" prefWidth="542.0" promptText="작성자를 입력하세요.">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextArea editable="false" layoutX="84.0" layoutY="246.0" prefHeight="264.0" prefWidth="714.0" promptText="내용을 작성해주세요.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="83.0" layoutY="530.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="목록">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="698.0" layoutY="530.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="수정">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
